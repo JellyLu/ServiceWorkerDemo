@@ -30,3 +30,22 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+
+self.addEventListener('push', function(event) {
+  console.log('push notification message');
+  const title = 'Message is comming';
+  const body = 'Recevied a push message';
+  const icon = '/images/icons/surfboards.svg';
+  const tag = 'push-notification-tag';
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag,
+      actions: [
+        { action: "yes", title: "Yes", icon: "/images/icons/high-wave.svg" },
+        { action: "no", title: "No", icon: "/images/icons/waves.svg" }
+      ]
+    })
+  );
+});
