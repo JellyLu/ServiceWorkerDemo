@@ -49,3 +49,25 @@ self.addEventListener('push', function(event) {
     })
   );
 });
+
+self.addEventListener('notificationclick', function(event) {
+  console.log('Notification tag');
+  event.notification.close();
+
+  event.waitUntil(clients.matchAll({
+    type: 'window'
+  }).then(function(clients) {
+    clients.forEach(function(client) {
+      console.log(client.url);
+      const url = new URL(client.url)
+      if(url.pathname === '/' && 'focus' in client) {
+        console.log('match focus');
+        return client.focus();
+      }
+    });
+    console.log('is open window', clients.openWindow);
+    if(clients.openWindow) {
+      clients.openWindow('/');
+    }
+  }));
+});
