@@ -1,0 +1,45 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+  line-height: 2.5;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+form label {
+  flex: 1;
+}
+
+input {
+  flex: 3;
+  height: 40px;
+  font-size: 12pt;
+  outline: 1px solid black;
+  padding: 0 10px;
+}
+
+input:invalid {
+  background-color: #FFD9D9;
+}
+
+input:not(focus):valid {
+  background-color: #D9FFD9;
+}
+
+input:focus {
+  border: 1px solid red;
+}
+
+button {
+  height: 44px;
+  margin-top: 20px;
+  background-color: #D81B60;
+  color: white;
+  font-size: 16pt;
+}
