@@ -13,23 +13,38 @@
   <form role="form">
     <div class="field">
       <label for="fullname">Fullname: </label>
-      <input autofocus id="fullname" type="text" name="fullname" placeholder="luyangjie" required autocomplete="name" maxlength="20">
+      <div class="fieldWrapper">
+        <input autofocus id="fullname" type="text" name="fullname" placeholder="luyangjie" required autocomplete="name" maxlength="20">
+        <div class="error"></div>
+      </div>
     </div>
     <div class="field">
       <label for="email">Email: </label>
-      <input autofocus id="email" type="email" name="email" placeholder="xxx@example.com" required autocomplete="email">
+      <div class="fieldWrapper">
+        <input autofocus id="email" type="email" name="email" placeholder="xxx@example.com" required autocomplete="email">
+        <div class="error"></div>
+      </div>
     </div>
     <div class="field">
       <label for="confirm-email">Confirm Email: </label>
-      <input autofocus id="confirm-email" type="email" name="confirm-email" placeholder="xxx@example.com" required autocomplete="email">
+      <div class="fieldWrapper">
+        <input autofocus id="confirm-email" type="email" name="confirm-email" placeholder="xxx@example.com" required autocomplete="email">
+        <div class="error"></div>
+      </div>
     </div>
     <div class="field">
       <label>Phone Number:</label>
-      <input autofocus id="phonenumber" type="tel" name="phone-number" placeholder="+86 15881616206" required autocomplete="tel">
+      <div class="fieldWrapper">
+        <input autofocus id="phonenumber" type="tel" name="phone-number" placeholder="+86 15881616206" required autocomplete="tel">
+        <div class="error"></div>
+      </div>
     </div>
     <div class="field">
       <label for="fav-website">Favorite Website: </label>
-      <input autofocus id="fav-website" type="url" name="fav-website" placeholder="https://www.favorite.com" required autocomplete="url">
+      <div class="fieldWrapper">
+        <input autofocus id="fav-website" type="url" name="fav-website" placeholder="https://www.favorite.com" required autocomplete="url">
+        <div class="error"></div>
+      </div>
     </div>
     <button type="submit" name="submit">Submit</button>
   </form>
