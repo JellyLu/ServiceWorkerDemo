@@ -20,6 +20,21 @@ form {
   height: 60px;
 }
 
+.groupField {
+  display: flex;
+}
+
+#region-select {
+  height: 44px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.phonenumbers {
+  display: flex;
+  flex-grow: 1;
+}
+
 .error {
   height: 20px;
   font-size: 10pt;
@@ -35,6 +50,8 @@ input {
   font-size: 12pt;
   outline: 1px solid black;
   padding: 0 10px;
+  flex-grow: 1;
+  display: flex;
 }
 
 input:invalid {

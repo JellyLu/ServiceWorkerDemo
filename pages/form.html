@@ -35,10 +35,23 @@
     <div class="field">
       <label>Phone Number:</label>
       <div class="fieldWrapper">
-        <input autofocus id="phonenumber" type="tel" name="phone-number" placeholder="+86 15881616206" required autocomplete="tel">
+        <div class="groupField">
+          <select id="region-select">
+            <option>CN</option>
+            <option>US</option>
+            <option>SG</option>
+          </select>
+          <div class="phonenumbers">
+            <input autofocus id="phonenumber1" type="tel" name="phone-number-1" placeholder="" required pattern="^1[5|8|3][0-9]{9}$|^[569][0-9]{7}$">
+            -
+            <input autofocus id="phonenumber2" type="tel" name="phone-number-2" style="display:none">
+            -
+            <input autofocus id="phonenumber3" type="tel" name="phone-number-3" style="display:none">
+          </div>
+        </div>
         <div class="error"></div>
       </div>
-    </div>
+  </div>
     <div class="field">
       <label for="fav-website">Favorite Website: </label>
       <div class="fieldWrapper">
