@@ -65,4 +65,21 @@ form.addEventListener("submit", function(event) {
     alert("form is invalid");
     return false;
   }
+
+  sendRequest(form);
 });
+
+function sendRequest(form) {
+  const XHR = new XMLHttpRequest();
+  const formData = new FormData(form);
+  XHR.addEventListener('load', function(event) {
+    alert(event.target.responseText);
+  });
+
+  XHR.addEventListener('error', function(event) {
+    alert("Oops, something went wrong" + formData);
+  });
+
+  XHR.open("POST", "http://http://127.0.0.1:8877/");
+  XHR.send(formData);
+}
