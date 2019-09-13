@@ -7,6 +7,20 @@
   flex-direction: column;
 }
 
+
+.fieldWrapper {
+  height: auto;
+  width: 100%;
+}
+
 #region-select {
   width: 100%;
+}
+
+form label {
+  flex-grow: 1;
+}
+
+.phonenumbers {
+  flex-direction: column;
 }
