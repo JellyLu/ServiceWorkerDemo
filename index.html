@@ -12,6 +12,7 @@
     <header>
       <h1>SW Debug</h1>
       <a class="to-form" aria-label="go to form page" href="/pages/form.html"><h1>Go Form</h1></a>
+      <a class="to-accessibilty" aria-label="go to accessibilty page" href="/pages/accessibilty.html"><h1>Accessibilty</h1></a>
     </header>
     <main>
       <img id="beach" src="/images/icons/beach.svg" alt="at the beach">
@@ -26,13 +27,13 @@
        srcset="/images/storyGrooming_1x.jpeg 400w, /images/storyGrooming_2x.jpeg 800w, /images/storyGrooming_3x.jpeg 1600w"
        sizes="(max-width:800px) 50vw, (max-width: 1600px) 80vw, 100vw"
     > -->
-    <picture>
-      <source media="(min-width: 1600px)" srcset="/images/storyGrooming_3x.jpeg">
-      <source media="(max-width: 800px)" srcset="/images/storyGrooming_1x.jpeg">
-      <img src="/images/storyGrooming_2x.jpeg" alt="story grooming">
-    </picture>
+      <picture>
+        <source media="(min-width: 1600px)" srcset="/images/storyGrooming_3x.jpeg">
+        <source media="(max-width: 800px)" srcset="/images/storyGrooming_1x.jpeg">
+        <img src="/images/storyGrooming_2x.jpeg" alt="story grooming">
+      </picture>
       <button class="subscribe-button" aria-label="click to subscribe push notification">Subscribe to Push Notification</button>
     </main>
-    <script src="/scripts/main.js"></script>
+    <script src="/scripts/main.js" defer></script>
   </body>
 </html>

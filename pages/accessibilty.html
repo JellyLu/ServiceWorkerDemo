@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Accessibilty</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <p role="contentinfo">Order</p>
+  <button onclick="foo.focus();">Focus my sibling</button>
+  <button tabindex="0">Press Tab to Focus Me!</button>
+  <button id="foo" tabindex="-1">I'm not keyboard focusable</button>
+  <button>I should be fourth</button>
+  <button>And I should be fifth</button>
+  <button tabindex="5">But I jumped to the front!</button>
+</body>
+</html>

@@ -22,7 +22,7 @@ header h1 {
   font-weight: normal;
 }
 
-header .to-form {
+header a {
   padding: 0 16px;
   text-decoration: none;
 }
