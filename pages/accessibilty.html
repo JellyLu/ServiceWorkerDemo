@@ -15,5 +15,57 @@
   <button>I should be fourth</button>
   <button>And I should be fifth</button>
   <button tabindex="5">But I jumped to the front!</button>
+
+  <button aria-label="aria label button" aria-describedby="button-describe">hidden button</button>
+  <div id="button-describe" hidden="true">with aria-describedby button</div>
+
+<div>
+  <label id="rg-label">Radio Groups<label>
+  <div aria-labelledby="rg-label" role="radiogroup">
+    <input type="radio" name="water" value="Water">Water</input>
+    <input type="radio" name="tea" value="Tea">Tea</input>
+    <input type="radio" name="coffee" value="Coffee">Coffee</input>
+    <input type="radio" name="milk" value="Milk">Milk</input>
+  </div>
+</div>
+  <div>
+    <p>Menu</p>
+    <div role="menu">
+      <div tabindex="0" role="menuitem" aria-haspopup="true">New ></div>
+      <div aria-owns="submenu"></div>
+      <div tabindex="0" role="menuitem">Options  ></div>
+      <div tabindex="0" role="menuitem">Rename  ></div>
+      <div role="menu" id="submenu">
+        <div tabindex="0" role="menuitem">File</div>
+        <div tabindex="0" role="menuitem">Folder</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>list box with aria-activedescendant</p>
+    <div role="listbox" tabindex="0" aria-activedescendant="i7">
+      <div role="option" id="i5">Item 5</div>
+      <div role="option" id="i6">Item 6</div>
+      <div role="option" id="i7">Item 7</div>
+      <div role="option" id="i8">Item 8</div>
+      <div role="option" id="i9">Item 9</div>
+    </div>
+  </div>
+
+  <div>
+    <p>list box with aria-position and aria-setsize</p>
+    <div role="listbox" tabindex="0">
+      <div role="option" aria-position="1" aria-setsize="11">Item 1</div>
+      <div role="option" aria-position="2" aria-setsize="11">Item 2</div>
+      <div role="option" aria-position="3" aria-setsize="11">Item 3</div>
+      <div role="option" aria-position="4" aria-setsize="11">Item 4</div>
+      <div role="option" aria-position="5" aria-setsize="11">Item 5</div>
+      <div role="option" aria-position="6" aria-setsize="11">Item 6</div>
+      <div role="option" aria-position="7" aria-setsize="11">Item 7</div>
+      <div role="option" aria-position="8" aria-setsize="11">Item 8</div>
+      <div role="option" aria-position="9" aria-setsize="11">Item 9</div>
+      <div role="option" aria-position="10" aria-setsize="11">Item 10</div>
+    </div>
+  </div>
 </body>
 </html>
