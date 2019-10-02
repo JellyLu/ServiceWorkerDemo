@@ -8,6 +8,21 @@
 </head>
 
 <body>
+
+  <main>
+    <p>Menu</p>
+    <nav role="menu">
+      <nav tabindex="0" role="menuitem" aria-haspopup="true">New ></nav>
+      <nav aria-owns="submenu"></nav>
+      <nav tabindex="0" role="menuitem">Options ></nav>
+      <nav tabindex="0" role="menuitem">Rename ></nav>
+      <nav role="menu" id="submenu">
+        <nav tabindex="0" role="menuitem">File</nav>
+        <nav tabindex="0" role="menuitem">Folder</nav>
+      </nav>
+    </nav>
+  </main>
+
   <p role="contentinfo">Order</p>
   <button onclick="foo.focus();">Focus my sibling</button>
   <button tabindex="0">Press Tab to Focus Me!</button>
@@ -19,27 +34,14 @@
   <button aria-label="aria label button" aria-describedby="button-describe">hidden button</button>
   <div id="button-describe" hidden="true">with aria-describedby button</div>
 
-<div>
-  <label id="rg-label">Radio Groups<label>
-  <div aria-labelledby="rg-label" role="radiogroup">
-    <input type="radio" name="water" value="Water">Water</input>
-    <input type="radio" name="tea" value="Tea">Tea</input>
-    <input type="radio" name="coffee" value="Coffee">Coffee</input>
-    <input type="radio" name="milk" value="Milk">Milk</input>
-  </div>
-</div>
   <div>
-    <p>Menu</p>
-    <div role="menu">
-      <div tabindex="0" role="menuitem" aria-haspopup="true">New ></div>
-      <div aria-owns="submenu"></div>
-      <div tabindex="0" role="menuitem">Options  ></div>
-      <div tabindex="0" role="menuitem">Rename  ></div>
-      <div role="menu" id="submenu">
-        <div tabindex="0" role="menuitem">File</div>
-        <div tabindex="0" role="menuitem">Folder</div>
-      </div>
-    </div>
+    <label id="rg-label">Radio Groups<label>
+        <div aria-labelledby="rg-label" role="radiogroup">
+          <input type="radio" name="water" value="Water">Water</input>
+          <input type="radio" name="tea" value="Tea">Tea</input>
+          <input type="radio" name="coffee" value="Coffee">Coffee</input>
+          <input type="radio" name="milk" value="Milk">Milk</input>
+        </div>
   </div>
   <div>
     <p>list box with aria-activedescendant</p>
@@ -68,4 +70,5 @@
     </div>
   </div>
 </body>
+
 </html>
